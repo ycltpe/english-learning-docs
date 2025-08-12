@@ -36,7 +36,7 @@ jobs:
       # 取消注释并启用 pnpm 安装步骤
       - uses: pnpm/action-setup@v3
         with:
-          version: 9  # 或者你项目中使用的具体版本
+          version: 10  # 或者你项目中使用的具体版本
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -52,6 +52,8 @@ jobs:
 
       - name: Build with VitePress
         run: pnpm docs:build # 使用 pnpm 运行构建命令
+        env:
+          NODE_ENV: production
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
