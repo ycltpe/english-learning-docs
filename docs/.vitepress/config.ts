@@ -93,6 +93,11 @@ export default defineConfig({
       }
     ],
     ['meta', { property: 'og:url', content: 'https://vitepress.dev/' }],
+    // 添加 Algolia 验证标签
+    [
+      'meta',
+      { name: 'algolia-site-verification', content: '8BA6BFEED18A6384' }
+    ],
     [
       'script',
       {
