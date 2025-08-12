@@ -52,8 +52,6 @@ jobs:
 
       - name: Build with VitePress
         run: pnpm docs:build # 使用 pnpm 运行构建命令
-        env:
-          NODE_ENV: production
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

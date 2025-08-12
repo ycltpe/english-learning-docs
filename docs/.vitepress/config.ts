@@ -14,6 +14,7 @@ const prod = !!process.env.NETLIFY
 
 export default defineConfig({
   title: 'VitePress',
+  base: '/english-learning-docs/',
 
   rewrites: {
     'en/:rest*': ':rest*'
