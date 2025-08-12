@@ -121,7 +121,7 @@ export default defineConfig({
       options: {
         appId: '7ECRFCUN66',
         apiKey: '0143618ebceb7a744931cdedbe1a4484',
-        indexName: 'vitepress',
+        indexName: 'ycltpe_github_io_7ecrfcun66_pages',
         askAi: 'YaVSonfX5bS8'
       }
     },
