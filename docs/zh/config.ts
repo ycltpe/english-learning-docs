@@ -6,7 +6,7 @@ const pkg = require('vitepress/package.json')
 
 export default defineAdditionalConfig({
   lang: 'zh-Hans',
-  description: '由 Vite 和 Vue 驱动的静态站点生成器',
+  description: '全面的英语学习指南，帮助你掌握英语听说读写技能',
 
   themeConfig: {
     nav: nav(),
@@ -25,7 +25,7 @@ export default defineAdditionalConfig({
 
     footer: {
       message: '基于 MIT 许可发布',
-      copyright: `版权所有 © 2019-${new Date().getFullYear()} 尤雨溪`
+      copyright: `版权所有 © 2024 英语学习指南`
     },
 
     docFooter: {
@@ -62,25 +62,33 @@ export default defineAdditionalConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     {
-      text: '指南',
-      link: '/zh/guide/what-is-vitepress',
+      text: '学习指南',
+      link: '/zh/guide/getting-started',
       activeMatch: '/zh/guide/'
     },
     {
-      text: '参考',
-      link: '/zh/reference/site-config',
+      text: '学习资源',
+      link: '/zh/reference/learning-resources',
       activeMatch: '/zh/reference/'
     },
     {
-      text: pkg.version,
+      text: '学习工具',
       items: [
         {
-          text: '更新日志',
-          link: 'https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md'
+          text: '词汇练习',
+          link: '/zh/reference/vocabulary-practice'
         },
         {
-          text: '参与贡献',
-          link: 'https://github.com/vuejs/vitepress/blob/main/.github/contributing.md'
+          text: '语法练习',
+          link: '/zh/reference/grammar-practice'
+        },
+        {
+          text: '听力练习',
+          link: '/zh/reference/listening-practice'
+        },
+        {
+          text: '口语练习',
+          link: '/zh/reference/speaking-practice'
         }
       ]
     }
@@ -90,77 +98,89 @@ function nav(): DefaultTheme.NavItem[] {
 function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: '简介',
+      text: '入门指南',
       collapsed: false,
       items: [
-        { text: '什么是 VitePress？', link: 'what-is-vitepress' },
-        { text: '快速开始', link: 'getting-started' },
-        { text: '路由', link: 'routing' },
-        { text: '部署', link: 'deploy' }
+        { text: '开始学习英语', link: 'getting-started' },
+        { text: '学习目标设定', link: 'goal-setting' },
+        { text: '学习计划制定', link: 'study-plan' },
+        { text: '学习方法论', link: 'learning-methodology' }
       ]
     },
     {
-      text: '写作',
+      text: '核心技能',
       collapsed: false,
       items: [
-        { text: 'Markdown 扩展', link: 'markdown' },
-        { text: '资源处理', link: 'asset-handling' },
-        { text: 'frontmatter', link: 'frontmatter' },
-        { text: '在 Markdown 使用 Vue', link: 'using-vue' },
-        { text: '国际化', link: 'i18n' }
+        { text: '听力训练', link: 'listening-skills' },
+        { text: '口语练习', link: 'speaking-skills' },
+        { text: '阅读技巧', link: 'reading-skills' },
+        { text: '写作能力', link: 'writing-skills' }
       ]
     },
     {
-      text: '自定义',
+      text: '语言基础',
       collapsed: false,
       items: [
-        { text: '自定义主题', link: 'custom-theme' },
-        { text: '扩展默认主题', link: 'extending-default-theme' },
-        { text: '构建时数据加载', link: 'data-loading' },
-        { text: 'SSR 兼容性', link: 'ssr-compat' },
-        { text: '连接 CMS', link: 'cms' }
+        { text: '词汇积累', link: 'vocabulary-building' },
+        { text: '语法掌握', link: 'grammar-mastery' },
+        { text: '发音练习', link: 'pronunciation-practice' },
+        { text: '语音语调', link: 'intonation-stress' }
       ]
     },
     {
-      text: '实验性功能',
+      text: '进阶学习',
       collapsed: false,
       items: [
-        { text: 'MPA 模式', link: 'mpa-mode' },
-        { text: 'sitemap 生成', link: 'sitemap-generation' }
+        { text: '商务英语', link: 'business-english' },
+        { text: '学术英语', link: 'academic-english' },
+        { text: '日常交际', link: 'daily-communication' },
+        { text: '文化理解', link: 'cultural-understanding' }
       ]
     },
-    { text: '配置和 API 参考', base: '/zh/reference/', link: 'site-config' }
+    {
+      text: '考试准备',
+      collapsed: false,
+      items: [
+        { text: '托福备考', link: 'toefl-preparation' },
+        { text: '雅思备考', link: 'ielts-preparation' },
+        { text: '四六级备考', link: 'cet-preparation' },
+        { text: '考研英语', link: 'graduate-english' }
+      ]
+    },
+    { text: '学习资源', base: '/zh/reference/', link: 'learning-resources' }
   ]
 }
 
 function sidebarReference(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: '参考',
+      text: '学习资源',
       items: [
-        { text: '站点配置', link: 'site-config' },
-        { text: 'frontmatter 配置', link: 'frontmatter-config' },
-        { text: '运行时 API', link: 'runtime-api' },
-        { text: 'CLI', link: 'cli' },
-        {
-          text: '默认主题',
-          base: '/zh/reference/default-theme-',
-          items: [
-            { text: '概览', link: 'config' },
-            { text: '导航栏', link: 'nav' },
-            { text: '侧边栏', link: 'sidebar' },
-            { text: '主页', link: 'home-page' },
-            { text: '页脚', link: 'footer' },
-            { text: '布局', link: 'layout' },
-            { text: '徽章', link: 'badge' },
-            { text: '团队页', link: 'team-page' },
-            { text: '上下页链接', link: 'prev-next-links' },
-            { text: '编辑链接', link: 'edit-link' },
-            { text: '最后更新时间戳', link: 'last-updated' },
-            { text: '搜索', link: 'search' },
-            { text: 'Carbon Ads', link: 'carbon-ads' }
-          ]
-        }
+        { text: '学习资源总览', link: 'learning-resources' },
+        { text: '在线课程推荐', link: 'online-courses' },
+        { text: '学习应用推荐', link: 'learning-apps' },
+        { text: '书籍推荐', link: 'book-recommendations' },
+        { text: '网站资源', link: 'website-resources' }
+      ]
+    },
+    {
+      text: '练习工具',
+      items: [
+        { text: '词汇练习', link: 'vocabulary-practice' },
+        { text: '语法练习', link: 'grammar-practice' },
+        { text: '听力练习', link: 'listening-practice' },
+        { text: '口语练习', link: 'speaking-practice' },
+        { text: '阅读练习', link: 'reading-practice' },
+        { text: '写作练习', link: 'writing-practice' }
+      ]
+    },
+    {
+      text: '学习技巧',
+      items: [
+        { text: '记忆方法', link: 'memory-techniques' },
+        { text: '时间管理', link: 'time-management' },
+        { text: '学习环境', link: 'study-environment' },
+        { text: '学习动力', link: 'motivation-maintenance' }
       ]
     }
   ]

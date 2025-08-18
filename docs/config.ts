@@ -6,7 +6,7 @@ const pkg = require('vitepress/package.json')
 
 export default defineAdditionalConfig({
   lang: 'en-US',
-  description: 'Vite & Vue powered static site generator.',
+  description: 'Comprehensive English learning guide.',
 
   themeConfig: {
     nav: nav(),
@@ -32,25 +32,21 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: 'Guide',
-      link: '/guide/what-is-vitepress',
+      link: '/guide/getting-started',
       activeMatch: '/guide/'
     },
     {
-      text: 'Reference',
-      link: '/reference/site-config',
+      text: 'Resources',
+      link: '/reference/learning-resources',
       activeMatch: '/reference/'
     },
     {
-      text: pkg.version,
+      text: 'Tools',
       items: [
-        {
-          text: 'Changelog',
-          link: 'https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md'
-        },
-        {
-          text: 'Contributing',
-          link: 'https://github.com/vuejs/vitepress/blob/main/.github/contributing.md'
-        }
+        { text: 'Vocabulary Practice', link: '/reference/vocabulary-practice' },
+        { text: 'Grammar Practice', link: '/reference/grammar-practice' },
+        { text: 'Listening Practice', link: '/reference/listening-practice' },
+        { text: 'Speaking Practice', link: '/reference/speaking-practice' }
       ]
     }
   ]
@@ -59,80 +55,89 @@ function nav(): DefaultTheme.NavItem[] {
 function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: 'Introduction',
+      text: 'Starter',
       collapsed: false,
       items: [
-        { text: 'What is VitePress?', link: 'what-is-vitepress' },
         { text: 'Getting Started', link: 'getting-started' },
-        { text: 'Routing', link: 'routing' },
-        { text: 'Deploy', link: 'deploy' }
+        { text: 'Goal Setting', link: 'goal-setting' },
+        { text: 'Study Plan', link: 'study-plan' },
+        { text: 'Learning Methodology', link: 'learning-methodology' }
       ]
     },
     {
-      text: 'Writing',
+      text: 'Core Skills',
       collapsed: false,
       items: [
-        { text: 'Markdown Extensions', link: 'markdown' },
-        { text: 'Asset Handling', link: 'asset-handling' },
-        { text: 'Frontmatter', link: 'frontmatter' },
-        { text: 'Using Vue in Markdown', link: 'using-vue' },
-        { text: 'Internationalization', link: 'i18n' }
+        { text: 'Listening', link: 'listening-skills' },
+        { text: 'Speaking', link: 'speaking-skills' },
+        { text: 'Reading', link: 'reading-skills' },
+        { text: 'Writing', link: 'writing-skills' }
       ]
     },
     {
-      text: 'Customization',
+      text: 'Language Foundations',
       collapsed: false,
       items: [
-        { text: 'Using a Custom Theme', link: 'custom-theme' },
-        {
-          text: 'Extending the Default Theme',
-          link: 'extending-default-theme'
-        },
-        { text: 'Build-Time Data Loading', link: 'data-loading' },
-        { text: 'SSR Compatibility', link: 'ssr-compat' },
-        { text: 'Connecting to a CMS', link: 'cms' }
+        { text: 'Vocabulary', link: 'vocabulary-building' },
+        { text: 'Grammar', link: 'grammar-mastery' },
+        { text: 'Pronunciation', link: 'pronunciation-practice' },
+        { text: 'Intonation & Stress', link: 'intonation-stress' }
       ]
     },
     {
-      text: 'Experimental',
+      text: 'Advanced Learning',
       collapsed: false,
       items: [
-        { text: 'MPA Mode', link: 'mpa-mode' },
-        { text: 'Sitemap Generation', link: 'sitemap-generation' }
+        { text: 'Business English', link: 'business-english' },
+        { text: 'Academic English', link: 'academic-english' },
+        { text: 'Daily Communication', link: 'daily-communication' },
+        { text: 'Cultural Understanding', link: 'cultural-understanding' }
       ]
     },
-    { text: 'Config & API Reference', base: '/reference/', link: 'site-config' }
+    {
+      text: 'Exam Preparation',
+      collapsed: false,
+      items: [
+        { text: 'TOEFL', link: 'toefl-preparation' },
+        { text: 'IELTS', link: 'ielts-preparation' },
+        { text: 'CET-4/6', link: 'cet-preparation' },
+        { text: 'Graduate Exam', link: 'graduate-english' }
+      ]
+    },
+    { text: 'Learning Resources', base: '/reference/', link: 'learning-resources' }
   ]
 }
 
 function sidebarReference(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: 'Reference',
+      text: 'Resources',
       items: [
-        { text: 'Site Config', link: 'site-config' },
-        { text: 'Frontmatter Config', link: 'frontmatter-config' },
-        { text: 'Runtime API', link: 'runtime-api' },
-        { text: 'CLI', link: 'cli' },
-        {
-          text: 'Default Theme',
-          base: '/reference/default-theme-',
-          items: [
-            { text: 'Overview', link: 'config' },
-            { text: 'Nav', link: 'nav' },
-            { text: 'Sidebar', link: 'sidebar' },
-            { text: 'Home Page', link: 'home-page' },
-            { text: 'Footer', link: 'footer' },
-            { text: 'Layout', link: 'layout' },
-            { text: 'Badge', link: 'badge' },
-            { text: 'Team Page', link: 'team-page' },
-            { text: 'Prev / Next Links', link: 'prev-next-links' },
-            { text: 'Edit Link', link: 'edit-link' },
-            { text: 'Last Updated Timestamp', link: 'last-updated' },
-            { text: 'Search', link: 'search' },
-            { text: 'Carbon Ads', link: 'carbon-ads' }
-          ]
-        }
+        { text: 'Overview', link: 'learning-resources' },
+        { text: 'Online Courses', link: 'online-courses' },
+        { text: 'Apps', link: 'learning-apps' },
+        { text: 'Books', link: 'book-recommendations' },
+        { text: 'Websites', link: 'website-resources' }
+      ]
+    },
+    {
+      text: 'Practice Tools',
+      items: [
+        { text: 'Vocabulary', link: 'vocabulary-practice' },
+        { text: 'Grammar', link: 'grammar-practice' },
+        { text: 'Listening', link: 'listening-practice' },
+        { text: 'Speaking', link: 'speaking-practice' },
+        { text: 'Reading', link: 'reading-practice' },
+        { text: 'Writing', link: 'writing-practice' }
+      ]
+    },
+    {
+      text: 'Study Tips',
+      items: [
+        { text: 'Memory Techniques', link: 'memory-techniques' },
+        { text: 'Time Management', link: 'time-management' },
+        { text: 'Study Environment', link: 'study-environment' },
+        { text: 'Motivation', link: 'motivation-maintenance' }
       ]
     }
   ]

@@ -13,8 +13,8 @@ import llmstxt from 'vitepress-plugin-llms'
 const prod = !!process.env.NETLIFY
 
 export default defineConfig({
-  title: 'VitePress',
-  base: '/english-learning-docs/',
+  title: 'English Learning Hub',
+  base: '/english-learning-hub/',
 
   rewrites: {
     'en/:rest*': ':rest*'
@@ -67,7 +67,7 @@ export default defineConfig({
   },
 
   sitemap: {
-    hostname: 'https://vitepress.dev',
+    hostname: 'https://ycltpe.github.io/english-learning-hub',
     transformItems(items) {
       return items.filter((item) => !item.url.includes('migration'))
     }
@@ -110,10 +110,10 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: { src: '/vitepress-logo-mini.svg', width: 24, height: 24 },
+    // logo: { src: '/', width: 24, height: 24 },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'wechat', link: '/' }
     ],
 
     search: {
