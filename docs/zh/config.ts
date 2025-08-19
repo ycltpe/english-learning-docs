@@ -15,7 +15,8 @@ export default defineAdditionalConfig({
 
     sidebar: {
       '/zh/guide/': { base: '/zh/guide/', items: sidebarGuide() },
-      '/zh/reference/': { base: '/zh/reference/', items: sidebarReference() }
+      '/zh/reference/': { base: '/zh/reference/', items: sidebarReference() },
+      '/zh/learning-tutorials/': { base: '/zh/learning-tutorials/', items: sidebarTutorials() }
     },
 
     editLink: {
@@ -65,6 +66,11 @@ function nav(): DefaultTheme.NavItem[] {
       text: '学习指南',
       link: '/zh/guide/getting-started',
       activeMatch: '/zh/guide/'
+    },
+    {
+      text: '学习教程',
+      link: '/zh/learning-tutorials/README',
+      activeMatch: '/zh/learning-tutorials/'
     },
     {
       text: '学习资源',
@@ -148,6 +154,75 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       ]
     },
     { text: '学习资源', base: '/zh/reference/', link: 'learning-resources' }
+  ]
+}
+
+function sidebarTutorials(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: '学习教程概览',
+      collapsed: false,
+      items: [
+        { text: '教程体系介绍', link: 'README' }
+      ]
+    },
+    {
+      text: '基础技能教程',
+      collapsed: false,
+      items: [
+        { text: '词汇积累系统', link: 'foundations/vocabulary-system' },
+        { text: '语法掌握教程', link: 'foundations/grammar-mastery' },
+        { text: '发音练习教程', link: 'foundations/pronunciation-practice' }
+      ]
+    },
+    {
+      text: '核心技能教程',
+      collapsed: false,
+      items: [
+        { text: '写作能力教程', link: 'skills/writing-proficiency' },
+        { text: '阅读策略教程', link: 'skills/reading-strategies' },
+        { text: '口语流利教程', link: 'skills/speaking-fluency' },
+        { text: '听力掌握教程', link: 'skills/listening-mastery' }
+      ]
+    },
+    {
+      text: '学习方法教程',
+      collapsed: false,
+      items: [
+        { text: '学习策略教程', link: 'learning-methods/learning-strategies' },
+        { text: '核心原则教程', link: 'learning-methods/core-principles' }
+      ]
+    },
+    {
+      text: '学习路径教程',
+      collapsed: false,
+      items: [
+        { text: '学习路径概览', link: 'learning-path/overview' },
+        { text: '学习路径规划', link: 'learning-path/path-planning' },
+        { text: '课程计划模板', link: 'learning-path/course-plans' }
+      ]
+    },
+    {
+      text: '学习工具教程',
+      collapsed: false,
+      items: [
+        { text: '学习工具使用', link: 'tools/essential-tools' }
+      ]
+    },
+    {
+      text: '练习材料',
+      collapsed: false,
+      items: [
+        { text: '综合练习题库', link: 'practice-materials/comprehensive-exercises' }
+      ]
+    },
+    {
+      text: '评估系统',
+      collapsed: false,
+      items: [
+        { text: '学习评估系统', link: 'assessment/learning-assessment' }
+      ]
+    }
   ]
 }
 
