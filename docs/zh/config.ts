@@ -16,7 +16,8 @@ export default defineAdditionalConfig({
     sidebar: {
       '/zh/guide/': { base: '/zh/guide/', items: sidebarGuide() },
       '/zh/reference/': { base: '/zh/reference/', items: sidebarReference() },
-      '/zh/learning-tutorials/': { base: '/zh/learning-tutorials/', items: sidebarTutorials() }
+      '/zh/learning-tutorials/': { base: '/zh/learning-tutorials/', items: sidebarTutorials() },
+      '/zh/english-content/': { base: '/zh/english-content/', items: sidebarEnglishContent() }
     },
 
     editLink: {
@@ -97,6 +98,11 @@ function nav(): DefaultTheme.NavItem[] {
           link: '/zh/reference/speaking-practice'
         }
       ]
+    },
+    {
+      text: '英语学习内容',
+      link: '/zh/english-content/README',
+      activeMatch: '/zh/english-content/'
     }
   ]
 }
@@ -256,6 +262,53 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
         { text: '时间管理', link: 'time-management' },
         { text: '学习环境', link: 'study-environment' },
         { text: '学习动力', link: 'motivation-maintenance' }
+      ]
+    }
+  ]
+}
+
+function sidebarEnglishContent(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: '内容概览',
+      collapsed: false,
+      items: [
+        { text: '学习内容中心', link: 'README' }
+      ]
+    },
+    {
+      text: '词汇学习',
+      collapsed: false,
+      items: [
+        { text: '基础词汇', link: 'vocabulary-basics' }
+      ]
+    },
+    {
+      text: '语法知识',
+      collapsed: false,
+      items: [
+        { text: '语法知识点', link: 'grammar-points' }
+      ]
+    },
+    {
+      text: '实用对话',
+      collapsed: false,
+      items: [
+        { text: '日常对话', link: 'daily-conversations' }
+      ]
+    },
+    {
+      text: '地道表达',
+      collapsed: false,
+      items: [
+        { text: '习语与俚语', link: 'idioms-slang' }
+      ]
+    },
+    {
+      text: '专业英语',
+      collapsed: false,
+      items: [
+        { text: '商务英语', link: 'business-english' }
       ]
     }
   ]
