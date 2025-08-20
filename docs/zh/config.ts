@@ -17,7 +17,8 @@ export default defineAdditionalConfig({
       '/zh/guide/': { base: '/zh/guide/', items: sidebarGuide() },
       '/zh/reference/': { base: '/zh/reference/', items: sidebarReference() },
       '/zh/learning-tutorials/': { base: '/zh/learning-tutorials/', items: sidebarTutorials() },
-      '/zh/english-content/': { base: '/zh/english-content/', items: sidebarEnglishContent() }
+      '/zh/english-content/': { base: '/zh/english-content/', items: sidebarEnglishContent() },
+      '/zh/study/': { base: '/zh/study/', items: sidebarStudy() }
     },
 
     // editLink: {
@@ -103,6 +104,12 @@ function nav(): DefaultTheme.NavItem[] {
       text: '英语学习内容',
       link: '/zh/english-content/README',
       activeMatch: '/zh/english-content/'
+    }
+    ,
+    {
+      text: '英语学习',
+      link: '/zh/study/README',
+      activeMatch: '/zh/study/'
     }
   ]
 }
@@ -311,6 +318,33 @@ function sidebarEnglishContent(): DefaultTheme.SidebarItem[] {
         { text: '商务英语', link: 'business-english' }
       ]
     }
+  ]
+}
+
+function sidebarStudy(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: '语法',
+      collapsed: false,
+      items: [
+        { text: '冠词', link: 'grammar/articles' },
+        { text: '介词', link: 'grammar/prepositions' },
+        { text: '代词', link: 'grammar/pronouns' },
+        { text: '时态', link: 'grammar/tenses' }
+      ]
+    },
+    {
+      text: '词汇',
+      collapsed: false,
+      items: [
+        { text: '日常词汇', link: 'vocabulary/daily-words' }
+      ]
+    },
+    { text: '听力', link: 'listening/README' },
+    { text: '口语', link: 'speaking/README' },
+    { text: '阅读', link: 'reading/README' },
+    { text: '写作', link: 'writing/README' },
+    { text: '学习指南', link: 'guide/README' }
   ]
 }
 
