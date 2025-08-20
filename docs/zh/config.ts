@@ -20,10 +20,10 @@ export default defineAdditionalConfig({
       '/zh/english-content/': { base: '/zh/english-content/', items: sidebarEnglishContent() }
     },
 
-    editLink: {
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页面'
-    },
+    // editLink: {
+    //   pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+    //   text: '在 GitHub 上编辑此页面'
+    // },
 
     footer: {
       message: '基于 MIT 许可发布',

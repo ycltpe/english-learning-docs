@@ -84,15 +84,15 @@ export default defineConfig({
     ],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:site_name', content: 'VitePress' }],
+    ['meta', { property: 'og:site_name', content: 'English Learning Hub' }],
     [
       'meta',
       {
         property: 'og:image',
-        content: 'https://vitepress.dev/vitepress-og.jpg'
+        content: '/vitepress-logo-mini.png'
       }
     ],
-    ['meta', { property: 'og:url', content: 'https://vitepress.dev/' }],
+    ['meta', { property: 'og:url', content: '/' }],
     // 添加 Algolia 验证标签
     [
       'meta',
